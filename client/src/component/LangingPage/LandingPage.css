@@ -1,0 +1,73 @@
+.landingContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing {
+    display: flex;
+    width: max-content;
+    margin: 1rem;
+    /* border: 1px solid black; */
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+}
+
+.landingImage {
+    /* background-color: green; */
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    width: 80rem;
+    height: 80rem;
+}
+
+.landingImage img {
+    border-radius: 0 1rem 1rem 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.landingInfo {
+    border-radius: 1rem 0 0 1rem;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80rem;
+    height: 80rem;
+}
+
+.landingInfo span {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.landing h1 {
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 1rem;
+    font-size: 5rem;
+}
+
+.landing button {
+    color: black;
+    background-color: white;
+    font-size: 2.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+}
+
+.landing button:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}

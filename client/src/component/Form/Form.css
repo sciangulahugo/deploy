@@ -1,0 +1,207 @@
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputFlex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.form {
+    margin-top: 4rem;
+    border: 0px solid black;
+    width: min(60rem, 100%);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 3rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    border-radius: 0.5rem;
+}
+
+.form fieldset {
+    margin: 1rem 0 0 0;
+    padding: 2rem;
+    border: 0px solid black;
+}
+
+.form legend {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+
+.form label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.form hr {
+    margin: 0.5rem 0;
+    height: 1px;
+    border: 0;
+    background-color: white;
+}
+
+.form input {
+    font-size: 1.5rem;
+    border: 0px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    outline: none;
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+    appearance: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+/* form .list {
+    display: flex;
+    flex-direction: e;
+} */
+
+/* .list .listUl {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr); 
+    list-style-type: none;
+    margin: 1rem;
+    padding: 0;
+    align-items: center;
+}
+
+.list .listLi {
+    /* border: 1px solid black; 
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding: 4px 15px;
+    margin-bottom: 0.5rem;
+}
+
+li.listLi {
+    text-align: center;
+}
+
+.list .listLi button:hover {
+    background-color: transparent;
+    color: red;
+    border: 1px solid red;
+}
+
+.listButton {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.listButton {
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.listButton {
+    background: white;
+}
+
+.listButton:hover {
+    background: black;
+    color: white;
+} */
+
+.buttonBack {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border: 0px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+}
+
+.buttonBack:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.selectBox select {
+    font-size: 1.5rem;
+}
+
+/* Temperaments */
+
+.list ul {
+    overflow: auto;
+    list-style: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    width: 30rem;
+    margin: 1rem auto 1rem auto;
+    padding: 2rem;
+}
+
+.listButton li {
+    width: max-content;
+    margin: 0.2rem;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    border-radius: 0.5rem;
+}
+
+.listButtonTemp {
+    margin: 0 0 0 1rem;
+    border: 0;
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.listButtonTemp:hover {
+    color: red;
+
+    /* font-weight: bold; */
+}
+
+.sendButton {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    border-radius: 0.5rem;
+}
+
+.sendButton:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+.sendButton:disabled,
+.sendButton[disabled] {
+    /* border: 1px solid #999999; */
+    background-color: #cccccc;
+    color: #666666;
+}
