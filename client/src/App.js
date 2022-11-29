@@ -8,6 +8,9 @@ import Form from './component/Form/Form.jsx';
 import PageNotFound from './component/PageNotFound/PageNotFound.jsx';
 import './App.css';
 import './Normalize.css';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:3001/';
+
 function App() {
     return (
         <>

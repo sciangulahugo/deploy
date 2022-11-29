@@ -23,7 +23,7 @@ export const getBreeds = () => {
         dispatch(startLoading());
         // Traemos todas las razas.
         try {
-            const breeds = await axios.get('http://localhost:3001/breeds');
+            const breeds = await axios.get('/breeds');
             dispatch({
                 type: GET_BREEDS,
                 payload: breeds.data,
@@ -40,9 +40,7 @@ export const getBreeds = () => {
 export const getTemperaments = () => {
     return async (dispatch) => {
         // Traemos todos los temperamentos.
-        const temperaments = await axios.get(
-            'http://localhost:3001/temperaments'
-        );
+        const temperaments = await axios.get('/temperaments');
         dispatch({
             type: GET_TEMPERAMENTS,
             payload: temperaments.data,
@@ -95,16 +93,14 @@ export const searchByName = (name) => {
     return async (dispatch) => {
         try {
             const resultSearch = await axios.get(
-                `http://localhost:3001/breeds/${name ? `?name=${name}` : ''}`
+                `/breeds/${name ? `?name=${name}` : ''}`
             );
             return dispatch({
                 type: SEARCH_BY_NAME,
                 payload: resultSearch.data,
             });
         } catch (error) {
-            const resultSearch = await axios.get(
-                'http://localhost:3001/breeds'
-            );
+            const resultSearch = await axios.get('/breeds');
             return dispatch({
                 type: SEARCH_BY_NAME,
                 payload: resultSearch.data,
@@ -113,7 +109,7 @@ export const searchByName = (name) => {
 
         // console.log(resultSearch.data);
         // console.log(
-        //     `http://localhost:3001/breeds/${name ? `?name=${name}` : ''}`
+        //     `/breeds/${name ? `?name=${name}` : ''}`
         // );
     };
 };
@@ -122,9 +118,7 @@ export const searchByName = (name) => {
 export const searchById = (id) => {
     return async (dispatch) => {
         dispatch(startLoading());
-        const resultSearch = await axios.get(
-            'http://localhost:3001/breeds/' + id
-        );
+        const resultSearch = await axios.get('/breeds/' + id);
         // console.log(resultSearch.data);
         dispatch({
             type: SEARCH_BY_ID,
@@ -137,10 +131,7 @@ export const searchById = (id) => {
 // Agregar breed.
 export const postBreed = (breed) => {
     return async (dispatch) => {
-        const response = await axios.post(
-            'http://localhost:3001/newbreed',
-            breed
-        );
+        const response = await axios.post('/newbreed', breed);
         return dispatch({
             type: POST_BREED,
             payload: response,
@@ -148,6 +139,6 @@ export const postBreed = (breed) => {
     };
 };
 // export const postBreed = async (breed) => {
-//     const response = await axios.post('http://localhost:3001/newbreed', breed);
+//     const response = await axios.post('/newbreed', breed);
 //     return response;
 // };
