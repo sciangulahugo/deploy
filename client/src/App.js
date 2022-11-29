@@ -9,7 +9,7 @@ import PageNotFound from './component/PageNotFound/PageNotFound.jsx';
 import './App.css';
 import './Normalize.css';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-production-bbc8.up.railway.app/';
 
 function App() {
     return (
