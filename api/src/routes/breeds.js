@@ -1,9 +1,8 @@
 const axios = require('axios');
 const app = require('express').Router();
 const { Breed, Temperament } = require('../db.js');
-const DOGS_API_KEY =
-    'live_64tlwulKRQXyzrjVCJXZL44wLgCcOV8UjQ2eMF1dTTTFiXcGzpzqa4y0wVzbuA8K';
-
+require('dotenv').config();
+const { DOGS_API_KEY } = process.env;
 const apiLink = `https://api.thedogapi.com/v1/breeds?api_key=${DOGS_API_KEY}`;
 /**
  * Globals.
